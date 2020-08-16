@@ -4,24 +4,24 @@ import { NavLink, Link } from "react-router-dom";
 // Personalização
 import "./styles.css";
 
-function Header(){
+function Header() {
   return (
     <header>
       <nav>
         <ul className="menu border-left border-right">
           <li className="menu-item border-left">
-            <Link to="/portifolio">PORTIFÓLIO</Link>
+            <NavLink to="/portifolio">PORTIFÓLIO</NavLink>
           </li>
           <li className="menu-item ">
-            <Link to="/">SOBRE</Link>
+            <NavLink to="/">SOBRE</NavLink>
           </li>
           <li className="menu-item border-right">
-            <Link to="/contatos">CONTATOS</Link>
+            <NavLink to="/contatos">CONTATOS</NavLink>
           </li>
         </ul>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;
