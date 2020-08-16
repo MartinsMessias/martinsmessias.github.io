@@ -1,0 +1,16 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.card-list > div {
+  flex: 1 1 350px;
+  max-width: 768px;
+  margin: 10px;
+}
+
+.container-portifolio {
+  margin: 5rem 2rem !important;
+}
