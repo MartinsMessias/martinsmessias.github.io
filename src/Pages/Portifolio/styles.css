@@ -14,3 +14,9 @@
 .container-portifolio {
   margin: 5rem 2rem !important;
 }
+
+@media (max-width: 768px) {
+  .container-portifolio {
+    margin: 4rem 1rem !important;
+  }
+}

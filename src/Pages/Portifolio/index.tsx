@@ -30,25 +30,6 @@ const Portifolio = () => {
                   />
                 );
             })}
-            {/* 
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div>
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div>
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div>
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div>
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div>
-            <div>
-              <Card title="Teste 1" description="descricao" link="teste.com" />
-            </div> */}
           </section>
         </div>
       </div>

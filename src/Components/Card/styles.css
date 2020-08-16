@@ -1,9 +1,9 @@
 .card {
-  max-width: 100%;
   background-color: var(--color-primary);
   border-radius: 8px;
   display: block;
   box-shadow: 2px 2px 5px black;
+  max-width: 100%;
 }
 
 .card-header {
@@ -33,19 +33,10 @@
   height: 40px;
   background-color: var(--color-bg);
   border-radius: 8px;
-  transition: 250ms;
+  transition: 550ms;
 }
 
 .card-btn:hover {
   background-color: var(--color-primary-light);
   transition: 250ms;
 }
-
-/* @media (max-width: 768px) {
-  .card {
-    width: 100%;
-    background-color: var(--color-primary);
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px black;
-  }
-} */
