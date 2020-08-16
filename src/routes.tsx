@@ -10,7 +10,7 @@ function Routes() {
   return (
     <BrowserRouter>
       <Header />
-      <Route path="/social/" exact component={SobrePage} />
+      <Route path="/" exact component={SobrePage} />
       <Route path="/portifolio" component={Portifolio} />
       <Route path="/contatos" component={ContatosPage} />
       <Footer />
