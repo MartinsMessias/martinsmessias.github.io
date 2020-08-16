@@ -1,22 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 // Personalização
 import "./styles.css";
 
-const Header = () => {
+function Header(){
   return (
     <header>
       <nav>
         <ul className="menu border-left border-right">
           <li className="menu-item border-left">
-            <NavLink to="/portifolio">PORTIFÓLIO</NavLink>
+            <Link to="/portifolio">PORTIFÓLIO</Link>
           </li>
           <li className="menu-item ">
-            <NavLink to="/">SOBRE</NavLink>
+            <Link to="/">SOBRE</Link>
           </li>
           <li className="menu-item border-right">
-            <NavLink to="/contatos">CONTATOS</NavLink>
+            <Link to="/contatos">CONTATOS</Link>
           </li>
         </ul>
       </nav>

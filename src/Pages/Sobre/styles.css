@@ -17,6 +17,16 @@
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .description-about {
+    margin-top: 1.5rem;
+    text-align: center;
+    text-indent: 0rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 .image-list > div > img {
   height: 90px;
   padding: 1rem;
