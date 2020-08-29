@@ -26,14 +26,18 @@ import sqlImg from "../../assets/img/sql.png";
 const SobrePage = () => {
   return (
     <>
-      <div className="row">
-        <div className="container container-sobre">
+      <div className="container">
+        <div className="row">
           <img
             src="https://github.com/MartinsMessias.png"
             alt="Foto de perfil"
             className="image"
           />
+        </div>
+        <div className="row">
           <h3 className="title">Messias de Souza Martins</h3>
+        </div>
+        <div className="row">
           <p className="description-about">
             Graduando em Sistemas de Informação, experiêcia com desenvolvimento
             back end com as linguagens Python e framework Django para construção
@@ -46,64 +50,66 @@ const SobrePage = () => {
             ReactJS.
           </p>
         </div>
-      </div>
-      <div className="slider">
-        <section className="image-list slide-track">
-          <div className="slide">
-            <img src={djangoImg} alt="Django" />
+        <div className="row">
+          <div className="slider">
+            <section className="image-list slide-track">
+              <div className="slide">
+                <img src={djangoImg} alt="Django" />
+              </div>
+              <div className="slide">
+                <img src={pythonImg} alt="Python" />
+              </div>
+              <div className="slide">
+                <img src={jsImg} alt="Javascript" />
+              </div>
+              <div className="slide">
+                <img src={htmllmg} alt="HTML" />
+              </div>
+              <div className="slide">
+                <img src={cssImg} alt="CSS" />
+              </div>
+              <div className="slide">
+                <img src={awsImg} alt="AWS" />
+              </div>
+              <div className="slide">
+                <img src={bootstrapImg} alt="Bootstrap" />
+              </div>
+              <div className="slide">
+                <img src={dartImg} alt="Dart" />
+              </div>
+              <div className="slide">
+                <img src={dockerImg} alt="Docker" />
+              </div>
+              <div className="slide">
+                <img src={flutterImg} alt="Flutter" />
+              </div>
+              <div className="slide">
+                <img src={gitImg} alt="Git" />
+              </div>
+              <div className="slide">
+                <img src={jsonImg} alt="json" />
+              </div>
+              <div className="slide">
+                <img src={linuxImg} alt="Linux" />
+              </div>
+              <div className="slide">
+                <img src={mongodbImg} alt="mongodb" />
+              </div>
+              <div className="slide">
+                <img src={mysqlImg} alt="MySql" />
+              </div>
+              <div className="slide">
+                <img src={reactImg} alt="React" />
+              </div>
+              <div className="slide">
+                <img src={restImg} alt="REST" />
+              </div>
+              <div className="slide">
+                <img src={sqlImg} alt="SQL" />
+              </div>
+            </section>
           </div>
-          <div className="slide">
-            <img src={pythonImg} alt="Python" />
-          </div>
-          <div className="slide">
-            <img src={jsImg} alt="Javascript" />
-          </div>
-          <div className="slide">
-            <img src={htmllmg} alt="HTML" />
-          </div>
-          <div className="slide">
-            <img src={cssImg} alt="CSS" />
-          </div>
-          <div className="slide">
-            <img src={awsImg} alt="AWS" />
-          </div>
-          <div className="slide">
-            <img src={bootstrapImg} alt="Bootstrap" />
-          </div>
-          <div className="slide">
-            <img src={dartImg} alt="Dart" />
-          </div>
-          <div className="slide">
-            <img src={dockerImg} alt="Docker" />
-          </div>
-          <div className="slide">
-            <img src={flutterImg} alt="Flutter" />
-          </div>
-          <div className="slide">
-            <img src={gitImg} alt="Git" />
-          </div>
-          <div className="slide">
-            <img src={jsonImg} alt="json" />
-          </div>
-          <div className="slide">
-            <img src={linuxImg} alt="Linux" />
-          </div>
-          <div className="slide">
-            <img src={mongodbImg} alt="mongodb" />
-          </div>
-          <div className="slide">
-            <img src={mysqlImg} alt="MySql" />
-          </div>
-          <div className="slide">
-            <img src={reactImg} alt="React" />
-          </div>
-          <div className="slide">
-            <img src={restImg} alt="REST" />
-          </div>
-          <div className="slide">
-            <img src={sqlImg} alt="SQL" />
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

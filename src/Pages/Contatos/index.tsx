@@ -7,11 +7,13 @@ import Footer from "../../Components/Footer";
 const ContatosPage = () => {
   return (
     <>
-      <div className="row">
-        <div className="container container-contatos">
+      <div className="container">
+        <div className="row">
           <h3 className="title">
             Você pode me encontrar através destas opções
           </h3>
+        </div>
+        <div className="row">
           <div className="btn-list">
             <a
               href="https://www.linkedin.com/in/messias-martins/"
@@ -90,6 +92,9 @@ const ContatosPage = () => {
               Instagram
             </a>
           </div>
+        </div>
+        <div className="row">
+          <Footer />
         </div>
       </div>
     </>

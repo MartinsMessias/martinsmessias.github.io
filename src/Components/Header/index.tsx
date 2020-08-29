@@ -10,13 +10,19 @@ function Header() {
       <nav>
         <ul className="menu border-left border-right">
           <li className="menu-item border-left">
-            <NavLink to="/portifolio">PORTIFÓLIO</NavLink>
+            <NavLink to="/portifolio" className="menu-link">
+              PORTIFÓLIO
+            </NavLink>
           </li>
           <li className="menu-item ">
-            <NavLink to="/">SOBRE</NavLink>
+            <NavLink to="/" className="menu-link">
+              SOBRE
+            </NavLink>
           </li>
           <li className="menu-item border-right">
-            <NavLink to="/contatos">CONTATOS</NavLink>
+            <NavLink to="/contatos" className="menu-link">
+              CONTATOS
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -16,22 +16,23 @@ const Portifolio = () => {
 
   return (
     <>
-      <div className="row">
-        <div className="container container-portifolio">
-          <h3 className="title">Portifólio de projetos</h3>
-          <section className="card-list">
-            {projects.map((project) => {
-              if (project["fork"] == 0)
-                return (
-                  <Card
-                    title={project["name"]}
-                    description={project["description"]}
-                    link={project["html_url"]}
-                  />
-                );
-            })}
-          </section>
+      <div className="container-cards">
+        <div className="row">
+          <h3 className="title title-cards">Portifólio de projetos</h3>
         </div>
+
+        <section className="card-list">
+          {projects.map((project) => {
+            if (project["fork"] == 0)
+              return (
+                <Card
+                  title={project["name"]}
+                  description={project["description"]}
+                  link={project["html_url"]}
+                />
+              );
+          })}
+        </section>
       </div>
     </>
   );

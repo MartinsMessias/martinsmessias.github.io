@@ -1,9 +1,3 @@
-.container-sobre {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 70px;
-}
-
 .image {
   width: 150px;
   border-radius: 50%;
@@ -17,7 +11,8 @@
   text-align: justify;
   text-indent: 2.5rem;
   line-height: 1.5rem;
-  font-size: 1rem;
+  font: 400 1rem 'Open Sans',
+    sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -26,17 +21,10 @@
     margin-bottom: 1.5rem;
     text-align: justify;
     text-indent: 0rem;
-    line-height: 1.5rem;
-    font-size: 1rem;
-  }
-  .container-sobre {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 70px;
   }
 }
 
-.image-list > div > img {
+.image-list>div>img {
   height: 90px;
   padding: 10%;
 }
@@ -46,10 +34,14 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-250px * 7));
   }
 }
+
+
+
 .slider {
   background: var(--color-secondary-light);
   height: 90px;
@@ -58,33 +50,36 @@
   position: relative;
   width: 100%;
 }
+
 .slider::before,
 .slider::after {
-  background: linear-gradient(
-    to right,
-    rgb(14 27 42) 0%,
-    rgb(255 255 255 / 0%) 100%
-  );
+  background: linear-gradient(to right,
+      rgb(14 27 42) 0%,
+      rgb(255 255 255 / 0%) 100%);
   content: "";
   height: 100px;
   position: absolute;
   width: 200px;
   z-index: 2;
 }
+
 .slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
+
 .slider::before {
   left: 0;
   top: 0;
 }
+
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
 }
+
 .slider .slide {
   height: 100px;
   width: 250px;

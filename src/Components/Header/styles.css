@@ -26,7 +26,7 @@ a {
   flex: 1;
   height: 100%;
   cursor: pointer;
-  transition: 250ms;
+  transition: 1s;
   transform-style: flat;
   opacity: 0.8;
 }
@@ -34,7 +34,7 @@ a {
 .menu-item:hover {
   background-color: var(--color-primary-light);
   opacity: 1;
-  transition: 240ms;
+  transition: 1s;
   flex: 2;
 }
 
