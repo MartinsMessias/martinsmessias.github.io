@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 import Card from "../../Components/Card";
 import api from "../../services/api";
+import Footer from "../../Components/Footer";
 
 const Portifolio = () => {
   const [projects, setProjects] = useState([]);
@@ -33,6 +34,9 @@ const Portifolio = () => {
               );
           })}
         </section>
+        <div className="row">
+          <Footer />
+        </div>
       </div>
     </>
   );

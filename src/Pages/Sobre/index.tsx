@@ -22,6 +22,7 @@ import mysqlImg from "../../assets/img/mysql.png";
 import reactImg from "../../assets/img/react.png";
 import restImg from "../../assets/img/rest.png";
 import sqlImg from "../../assets/img/sql.png";
+import Footer from "../../Components/Footer";
 
 const SobrePage = () => {
   return (
@@ -109,6 +110,9 @@ const SobrePage = () => {
               </div>
             </section>
           </div>
+        </div>
+        <div className="row">
+          <Footer />
         </div>
       </div>
     </>
