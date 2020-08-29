@@ -54,9 +54,8 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .container {
-    margin-top: 120px;
+    margin-top: 12%;
   }
 
   .title {
