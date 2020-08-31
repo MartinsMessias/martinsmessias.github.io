@@ -34,9 +34,9 @@ const Portifolio = () => {
               );
           })}
         </section>
-        <div className="row">
-          <Footer />
-        </div>
+      </div>
+      <div className="row">
+        <Footer />
       </div>
     </>
   );
