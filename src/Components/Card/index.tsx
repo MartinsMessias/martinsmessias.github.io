@@ -7,6 +7,7 @@ interface CardProps {
   title: string;
   description: string;
   link: string;
+  lang: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
@@ -14,6 +15,7 @@ const Card: React.FC<CardProps> = (props) => {
     <div className="card">
       <div className="card-header">
         <p className="card-title">{props.title}</p>
+        {props.lang ? <span className="badge">{props.lang}</span> : <p></p>}
       </div>
       <div className="card-body">
         <p className="card-body-text">{props.description}</p>

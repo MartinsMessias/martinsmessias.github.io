@@ -16,8 +16,9 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 10px 20px;
-  text-align: left;
-  font: 600 1.2rem 'Open Sans',
+  display: flex;
+  justify-content: space-between;
+  font: 500 1.2rem 'Open Sans',
     sans-serif;
 }
 
@@ -52,4 +53,12 @@
 .card-btn:hover {
   background-color: var(--color-primary-light);
   transition: 250ms;
+}
+
+.badge {
+  background-color: brown;
+  border-radius: 5px;
+  padding: 1px 5px;
+  font-size: 12pt;
+  font-weight: 400;
 }

@@ -30,6 +30,7 @@ const Portifolio = () => {
                   title={project["name"]}
                   description={project["description"]}
                   link={project["html_url"]}
+                  lang={project["language"]}
                 />
               );
           })}
