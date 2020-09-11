@@ -1,20 +1,12 @@
 import React from "react";
 
-// Personalização
-import "./styles.css";
-import Footer from "../../Components/Footer";
-
 const ContatosPage = () => {
   return (
-    <>
-      <div className="container">
-        <div className="row">
-          <h3 className="title">
-            Você pode me encontrar através destas opções
-          </h3>
-        </div>
-        <div className="row">
-          <div className="btn-list">
+    <main>
+      <section>
+        <div className="container">
+          <h1 className="section-title">Contatos</h1>
+          <div id="contacts-section">
             <a
               href="https://www.linkedin.com/in/messias-martins/"
               className="btn"
@@ -93,11 +85,8 @@ const ContatosPage = () => {
             </a>
           </div>
         </div>
-        <div className="row">
-          <Footer />
-        </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 

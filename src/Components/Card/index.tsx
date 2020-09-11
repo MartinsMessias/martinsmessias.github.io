@@ -1,8 +1,5 @@
 import React from "react";
 
-// Personalização
-import "./styles.css";
-
 interface CardProps {
   title: string;
   description: string;
@@ -13,18 +10,13 @@ interface CardProps {
 const Card: React.FC<CardProps> = (props) => {
   return (
     <div className="card">
-      <div className="card-header">
-        <p className="card-title">{props.title}</p>
-        {props.lang ? <span className="badge">{props.lang}</span> : <p></p>}
-      </div>
-      <div className="card-body">
-        <p className="card-body-text">{props.description}</p>
-      </div>
-      <div className="card-footer">
-        <a className="card-btn" href={props.link}>
-          Quero ver
-        </a>
-      </div>
+      <a href={props.link}>
+        <div className="card-body">
+          <h4 className="card-title">{props.title}</h4>
+          {props.lang ? <span className="badge">{props.lang}</span> : <p></p>}
+          <p className="card-subtitle">{props.description}</p>
+        </div>
+      </a>
     </div>
   );
 };
