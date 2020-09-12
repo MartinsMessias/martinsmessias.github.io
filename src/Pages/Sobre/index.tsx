@@ -8,7 +8,7 @@ const SobrePage = () => {
       <main>
         <section>
           <div className="container">
-            <h1 className="section-title">Sobre</h1>
+            <h1 className="section-title">Sobre mim</h1>
             <div id="about-section">
               <img
                 src="https://github.com/MartinsMessias.png"
@@ -28,6 +28,12 @@ const SobrePage = () => {
                 meu conhecimento em desenvolvimento frontend com ReactJS.
               </p>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h1 className="section-title">Skills</h1>
+            Em breve!
           </div>
         </section>
       </main>

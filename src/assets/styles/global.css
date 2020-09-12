@@ -124,6 +124,7 @@ body main {
   width: 30%;
   border-radius: 5px;
   z-index: 1;
+  box-shadow: 2px 2px 15px #00000030;
 }
 
 #contacts-section {
@@ -136,7 +137,7 @@ body main {
 #contacts-section .btn {
   width: 50%;
   padding: 10px;
-  border: 1px solid var(--color-darker);
+  box-shadow: 2px 2px 15px #00000030;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,14 +157,17 @@ body main {
 
 #cards-section .card {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   /* min-height: 200px; */
-  border: 1px solid var(--color-darker);
+  /* border: 1px solid var(--color-darker); */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 5px;
   margin: 20px 0;
+  box-shadow: 2px 2px 15px #00000030;
+  min-height: 100%;
+
 }
 
 
@@ -172,16 +176,19 @@ body main {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   min-height: 40vh;
   max-height: 45vh;
+
 }
 
 #cards-section .card .card-body .card-title {
   color: var(--color-darker);
   width: 50%;
+  padding: 10px 15px;
+  border-block-end: 1px solid var(--color-darker);
 }
 
 #cards-section .card .card-body .card-subtitle {
@@ -196,6 +203,7 @@ body main {
   padding: 5px;
   background-color: #d3d3d3;
   width: auto;
+  text-align: center;
 }
 
 /* FOOTER*/
@@ -284,11 +292,12 @@ a {
     min-width: 45%;
     justify-content: space-between;
     transition: .5s;
+    border: 1px solid transparent;
     cursor: pointer;
   }
 
   #cards-section .card:hover {
-    box-shadow: 2px 2px 15px black;
+    border: 1px solid black;
   }
 
   /*End CARDS*/
@@ -307,13 +316,26 @@ a {
     justify-content: space-between;
     transition: .5s;
     cursor: pointer;
+    border: 1px solid transparent;
   }
 
   #contacts-section .btn:hover {
-    box-shadow: 2px 2px 15px black;
+    border: 1px solid black;
   }
 
   #about-section .image {
     width: 10%;
   }
+
+  #about-section .description-about {
+    width: 60%;
+    text-align: justify;
+  }
+
+  #contacts-section {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+  }
+
 }

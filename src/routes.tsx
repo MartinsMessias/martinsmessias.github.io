@@ -12,6 +12,7 @@ function Routes() {
       <Route path="/" exact component={SobrePage} />
       <Route path="/portifolio/" component={Portifolio} />
       <Route path="/contatos/" component={ContatosPage} />
+      <Footer />
     </HashRouter>
   );
 }
