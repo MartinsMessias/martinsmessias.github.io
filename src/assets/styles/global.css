@@ -229,6 +229,27 @@ a {
 
 /*End Footer*/
 
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 5%; */
+}
+
+
+
+.div-line {
+  display: none;
+}
+
+.skill-level {
+  margin: 20px 0;
+  text-align: left;
+  padding: 10px 0;
+  color: var(--color-darker);
+  border-block-end: 1px solid #000000;
+}
+
+
 @media (min-width: 1000px) {
   :root {
     font-size: 62.5%;
@@ -338,4 +359,26 @@ a {
     height: 50vh;
   }
 
+  #skills-section {
+    width: 100%;
+  }
+
+  .div-line {
+    display: block;
+    margin: 0 1%;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .skill-list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .skill-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+  }
 }
