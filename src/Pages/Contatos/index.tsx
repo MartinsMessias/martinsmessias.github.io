@@ -30,7 +30,7 @@ const ContatosPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp: +55 48 99828-5411
+                WhatsApp
               </a>
               <a
                 href="https://www.linkedin.com/in/messias-martins/?locale=en_US"
@@ -38,7 +38,7 @@ const ContatosPage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn (perfil atualizado)
+                LinkedIn
               </a>
               <a
                 href="https://github.com/MartinsMessias"
