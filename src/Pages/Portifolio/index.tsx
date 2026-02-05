@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+import React, { useEffect, useState } from "react";
 
 import Card from "../../Components/Card";
 import api from "../../services/api";
@@ -49,7 +47,7 @@ const Portifolio = () => {
                 })
               ) : (
                 <div className="loading-state">
-                  <Loader type="Grid" color="#d4dfff" height={80} width={80} />
+                  <div className="spinner" aria-label="Carregando projetos" />
                 </div>
               )}
             </div>

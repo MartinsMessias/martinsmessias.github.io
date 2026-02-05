@@ -12,6 +12,9 @@ function Header() {
     setMenuOpen(false);
   }
 
+  const menuLinkClassName = ({ isActive }: { isActive: boolean }) =>
+    isActive ? "menu-link active" : "menu-link";
+
   return (
     <header>
       <div className="container header-container">
@@ -29,17 +32,17 @@ function Header() {
 
         <ul className={`nav-menu ${menuIsOpen ? "open" : ""}`}>
           <li className="nav-menu-item">
-            <NavLink to="/" exact className="menu-link" onClick={closeMenu}>
+            <NavLink to="/" end className={menuLinkClassName} onClick={closeMenu}>
               SOBRE
             </NavLink>
           </li>
           <li className="nav-menu-item">
-            <NavLink to="/portifolio" className="menu-link" onClick={closeMenu}>
+            <NavLink to="/portifolio" className={menuLinkClassName} onClick={closeMenu}>
               PORTFÓLIO
             </NavLink>
           </li>
           <li className="nav-menu-item">
-            <NavLink to="/contatos" className="menu-link" onClick={closeMenu}>
+            <NavLink to="/contatos" className={menuLinkClassName} onClick={closeMenu}>
               CONTATOS
             </NavLink>
           </li>
