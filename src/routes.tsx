@@ -1,9 +1,8 @@
 import React from "react";
-import { BrowserRouter, Route, HashRouter, Switch } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import SobrePage from "./Pages/Sobre";
 import Portifolio from "./Pages/Portifolio";
 import ContatosPage from "./Pages/Contatos";
-import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 function Routes() {
