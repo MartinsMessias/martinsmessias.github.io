@@ -1,47 +1,53 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+
 function Header() {
   const [menuIsOpen, setMenuOpen] = useState(false);
 
-  const closedMenu = {
-    transform: "translate(0%, 0%)",
-  };
-
-  const openedMenu = {
-    transform: "translate(100%, 0%)",
-  };
-
   function handleMenuOpen() {
-    menuIsOpen ? setMenuOpen(false) : setMenuOpen(true);
+    setMenuOpen(!menuIsOpen);
   }
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
+  const menuLinkClassName = ({ isActive }: { isActive: boolean }) =>
+    isActive ? "menu-link active" : "menu-link";
 
   return (
     <header>
-      <h1 className="logo">MSM</h1>
-      <span
-        id="menu-activator"
-        className="menu-button"
-        onClick={handleMenuOpen}
-      >
-        {!menuIsOpen ? "☰" : "<Voltar"}
-      </span>
-      <ul className="nav-menu" style={menuIsOpen ? closedMenu : openedMenu}>
-        <li className="nav-menu-item">
-          <NavLink to="/" className="menu-link">
-            SOBRE
-          </NavLink>
-        </li>
-        <li className="nav-menu-item">
-          <NavLink to="/portifolio" className="menu-link">
-            PORTFÓLIO
-          </NavLink>
-        </li>
-        <li className="nav-menu-item">
-          <NavLink to="/contatos" className="menu-link">
-            CONTATOS
-          </NavLink>
-        </li>
-      </ul>
+      <div className="container header-container">
+        <h1 className="logo">Messias Martins</h1>
+        <button
+          id="menu-activator"
+          className="menu-button"
+          onClick={handleMenuOpen}
+          aria-label="Abrir menu de navegação"
+          aria-expanded={menuIsOpen}
+          type="button"
+        >
+          {!menuIsOpen ? "☰" : "✕"}
+        </button>
+
+        <ul className={`nav-menu ${menuIsOpen ? "open" : ""}`}>
+          <li className="nav-menu-item">
+            <NavLink to="/" end className={menuLinkClassName} onClick={closeMenu}>
+              SOBRE
+            </NavLink>
+          </li>
+          <li className="nav-menu-item">
+            <NavLink to="/portifolio" className={menuLinkClassName} onClick={closeMenu}>
+              PORTFÓLIO
+            </NavLink>
+          </li>
+          <li className="nav-menu-item">
+            <NavLink to="/contatos" className={menuLinkClassName} onClick={closeMenu}>
+              CONTATOS
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

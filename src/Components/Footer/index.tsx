@@ -1,10 +1,9 @@
 import React from "react";
-// import "../../assets/js/script";
 
 const Footer = () => {
   return (
     <footer>
-      <p className="footer-text">&copy; Messias Martins 2020</p>
+      <p className="footer-text">© {new Date().getFullYear()} Messias Martins • Backend Engineer</p>
     </footer>
   );
 };
