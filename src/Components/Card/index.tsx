@@ -7,17 +7,20 @@ interface CardProps {
   lang: string;
 }
 
-const Card: React.FC<CardProps> = (props) => {
+const Card: React.FC<CardProps> = ({ title, description, link, lang }) => {
   return (
-    <div className="card">
-      <a href={props.link}>
+    <article className="card">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="card-body">
-          <h4 className="card-title">{props.title}</h4>
-          {props.lang ? <span className="badge">{props.lang}</span> : <p></p>}
-          <p className="card-subtitle">{props.description}</p>
+          <h4 className="card-title">{title}</h4>
+          {lang ? <span className="badge">{lang}</span> : null}
+          <p className="card-subtitle">
+            {description || "Projeto publicado no GitHub com foco em qualidade e evolução contínua."}
+          </p>
+          <span className="card-cta">Ver repositório →</span>
         </div>
       </a>
-    </div>
+    </article>
   );
 };
 
