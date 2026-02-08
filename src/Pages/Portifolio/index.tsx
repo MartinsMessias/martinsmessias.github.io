@@ -1,21 +1,34 @@
-import React, { useState, useEffect } from "react";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import React, { useEffect, useMemo, useState } from "react";
 
-import Loader from "react-loader-spinner";
-
-// Personalização
 import Card from "../../Components/Card";
 import api from "../../services/api";
 import Header from "../../Components/Header";
 
+interface GithubProject {
+  id: number;
+  name: string;
+  description: string | null;
+  html_url: string;
+  language: string | null;
+  fork: boolean;
+  stargazers_count: number;
+}
+
 const Portifolio = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<GithubProject[]>([]);
 
   useEffect(() => {
     api.get("repos?sort=pushed").then((res) => {
-      setProjects(res["data"]);
+      setProjects(res.data);
     });
   }, []);
+
+  const filteredProjects = useMemo(
+    () => projects.filter((project) => project.fork === false),
+    [projects]
+  );
+
+  const totalStars = filteredProjects.reduce((acc, project) => acc + project.stargazers_count, 0);
 
   return (
     <>
@@ -23,22 +36,38 @@ const Portifolio = () => {
       <main>
         <section>
           <div className="container">
-            <h1 className="section-title">Portfólio</h1>
+            <div className="portfolio-header glass-card">
+              <h1 className="section-title">Portfólio</h1>
+              <p className="section-description">
+                Projetos com código público, evolução contínua e foco em arquitetura de produto.
+              </p>
+              <div className="portfolio-metrics">
+                <div>
+                  <strong>{filteredProjects.length}</strong>
+                  <span>projetos públicos</span>
+                </div>
+                <div>
+                  <strong>{totalStars}</strong>
+                  <span>estrelas no GitHub</span>
+                </div>
+              </div>
+            </div>
+
             <div id="cards-section">
-              {projects.length > 0 ? (
-                projects.map((project) => {
-                  if (project["fork"] == 0)
-                    return (
-                      <Card
-                        title={project["name"]}
-                        description={project["description"]}
-                        link={project["html_url"]}
-                        lang={project["language"]}
-                      />
-                    );
-                })
+              {filteredProjects.length > 0 ? (
+                filteredProjects.map((project) => (
+                  <Card
+                    key={project.id}
+                    title={project.name}
+                    description={project.description || ""}
+                    link={project.html_url}
+                    lang={project.language || ""}
+                  />
+                ))
               ) : (
-                <Loader type="Grid" color="#0000030" height={80} width={80} />
+                <div className="loading-state">
+                  <div className="spinner" aria-label="Carregando projetos" />
+                </div>
               )}
             </div>
           </div>
